@@ -78,7 +78,7 @@ namespace Note.ViewModel
             Login = File.ReadAllText($"{Environment.CurrentDirectory}\\TempLogin.txt");
             string pathToTasks = $"{Environment.CurrentDirectory}\\{Login}\\Tasks.json";
             TaskList = new ObservableCollectionEX<Item>();
-            LoadJsonITEMS(pathToTasks); // УЗНАТЬ КАК ОБРАЩАТЬСЯ К ПЕРЕМЕННЫМ В JSON
+            LoadJsonITEMS(pathToTasks);
             CloseTaskWindowCommand = new RelayCommand(o =>
             {
                 File.Delete($"{Environment.CurrentDirectory}\\TempLogin.txt");
